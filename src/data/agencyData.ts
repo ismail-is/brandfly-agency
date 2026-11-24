@@ -1,27 +1,30 @@
+const withBase = (assetPath: string) =>
+  `${import.meta.env.BASE_URL}${assetPath.replace(/^\/+/, '')}`;
+
 export const BRAND_LOGOS = {
-  horizontal: '/assets/aistudio/H_white-on-purple_horizontal_transparent_db123ddc.png',
-  stacked: '/assets/aistudio/H_white-on-purple_stacked_transparent_2789ef77.png',
-  fullTagline: '/assets/aistudio/F_black-and-white_white_1a1c0cc2.png',
-  icon: '/assets/aistudio/A_icon_white_8bb3c8f1.png',
+  horizontal: withBase('/assets/aistudio/H_white-on-purple_horizontal_transparent_db123ddc.png'),
+  stacked: withBase('/assets/aistudio/H_white-on-purple_stacked_transparent_2789ef77.png'),
+  fullTagline: withBase('/assets/aistudio/F_black-and-white_white_1a1c0cc2.png'),
+  icon: withBase('/assets/aistudio/A_icon_white_8bb3c8f1.png'),
 } as const;
 
 export const UPLOADED_POSTERS = {
-  hireCreativeAgency: '/assets/aistudio/Instagram_post_4_5_1x_10e6e77c.png',
-  notBoring: '/assets/aistudio/Instagram_post_2_1x_f4ee159f.png',
-  ctrlZ: '/assets/aistudio/Ctrl___Z_Marketing_Poster_e27e777f.png',
-  eagleLimits: '/assets/aistudio/Brandify_Eagle__Beyond_Limits_340bed5b.png',
-  liftsBrandUp: '/assets/aistudio/Brandify_Lifts_Your_Brand_Up_b67be188.png',
-  beeAmplify: '/assets/aistudio/Brandify_Bee__Amplify_Your_Brand_476451e8.png',
-  digitalMarketingEngine: '/assets/aistudio/Brandfiy_-_1.jpg_9abba74f.jpeg',
+  hireCreativeAgency: withBase('/assets/aistudio/Instagram_post_4_5_1x_10e6e77c.png'),
+  notBoring: withBase('/assets/aistudio/Instagram_post_2_1x_f4ee159f.png'),
+  ctrlZ: withBase('/assets/aistudio/Ctrl___Z_Marketing_Poster_e27e777f.png'),
+  eagleLimits: withBase('/assets/aistudio/Brandify_Eagle__Beyond_Limits_340bed5b.png'),
+  liftsBrandUp: withBase('/assets/aistudio/Brandify_Lifts_Your_Brand_Up_b67be188.png'),
+  beeAmplify: withBase('/assets/aistudio/Brandify_Bee__Amplify_Your_Brand_476451e8.png'),
+  digitalMarketingEngine: withBase('/assets/aistudio/Brandfiy_-_1.jpg_9abba74f.jpeg'),
 } as const;
 
 export const GENERATED_MEDIA = {
-  c2Branding: '/src/assets/images/c2_couture_branding_1795337838421.jpg',
-  flyBranding: '/src/assets/images/fly_market_branding_1795337838041.jpg',
-  sipCoffee: '/src/assets/images/sip_cup_coffee_1795337838844.jpg',
-  eloraWeb: '/src/assets/images/elora_fragrance_web_1795337837527.jpg',
-  mirrorWeb: '/src/assets/images/mirror_auto_web_1795337839040.jpg',
-  shayWeb: '/src/assets/images/shay_tehran_web_1795337838818.jpg',
+  c2Branding: withBase('/src/assets/images/c2_couture_branding_1795337838421.jpg'),
+  flyBranding: withBase('/src/assets/images/fly_market_branding_1795337838041.jpg'),
+  sipCoffee: withBase('/src/assets/images/sip_cup_coffee_1795337838844.jpg'),
+  eloraWeb: withBase('/src/assets/images/elora_fragrance_web_1795337837527.jpg'),
+  mirrorWeb: withBase('/src/assets/images/mirror_auto_web_1795337839040.jpg'),
+  shayWeb: withBase('/src/assets/images/shay_tehran_web_1795337838818.jpg'),
 } as const;
 
 export interface ServiceItem {
